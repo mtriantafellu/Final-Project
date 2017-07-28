@@ -9,6 +9,7 @@ The npm modules required for this project are as follows (all of which have been
 - npm 'morgan'
 - npm 'react'
 - npm 'react-dom'
+- npm 'react-router'
 - npm 'request'
 - npm 'require'
 - npm 'babel'
