@@ -14,6 +14,10 @@ The npm modules required for this project are as follows (all of which have been
 - npm 'babel-loader'
 - npm 'webpack'
 
+Google Calander:
+- npm install googleapis --save
+- npm install google-auth-library --save
+
 # Purpose:
 The primary purpose of the job-tracker app is to provide small-businesses/contracters with an easy to use job-tracking platform that is linked with their google calanders.  The existing 'Jobber' app is cumbersome and not user friendly, it is difficult for the field technician to use and harder for the admin user to keep track of what is actually going on.  This app was designed to perform the most routine day to day tasks and consolidate them in an easy to use platform.
 
