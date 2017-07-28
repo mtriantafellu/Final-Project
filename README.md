@@ -1,6 +1,4 @@
-# Final-Project
-
-###Job Tracker
+# Final Project - Job Tracker
 
 
 # Requirements
