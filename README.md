@@ -43,3 +43,8 @@ These two users have access to different types of functions/data.
 - Matt Triantafellu
 - UCF Coding BootCamp Summer 2017
 
+# Helpful topics:
+- Python:  https://automatetheboringstuff.com/chapter0/
+- Google Calanders:  https://developers.google.com/google-apps/calendar/quickstart/nodejs
+- Jobber:  https://getjobber.com/?utm_source=google&utm_medium=cpc&utm_campaign=us_branded-ab_jobber-exact&utm_term=jobber
+
