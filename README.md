@@ -15,10 +15,11 @@ The npm modules required for this project are as follows (all of which have been
 - npm 'webpack'
 
 # Purpose:
-The primary purpose of the job-tracker app is to provide small-businesses/contracters with an easy to use job-tracking platform that is linked with their google calanders.  There are two primary types of accounts.  
+The primary purpose of the job-tracker app is to provide small-businesses/contracters with an easy to use job-tracking platform that is linked with their google calanders.  The existing 'Jobber' app is cumbersome and not user friendly, it is difficult for the field technician to use and harder for the admin user to keep track of what is actually going on.  This app was designed to perform the most routine day to day tasks and consolidate them in an easy to use platform.
+
+There are two primary types of accounts.  
 1.  The direct user (underling)
 2.  The admin user (boss)
-The existing 'Jobber' app is cumbersome and not user friendly, it is difficult for the field technician to use and harder for the admin user to keep track of what is actually going on.  This app was designed to perform the most routine day to day tasks and consolidate them in an easy to use platform.
 
 # Usage:
 These two users have access to different types of functions/data.
