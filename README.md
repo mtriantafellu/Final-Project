@@ -22,8 +22,8 @@ The existing 'Jobber' app is cumbersome and not user friendly, it is difficult f
 
 # Usage:
 These two users have access to different types of functions/data.
-*Under the user paradigm the individual can view their calander for the week which has been updated from google calanders.  The different functions include adding a work repair order (with the quote price), adding a needed items list that will create a new spot on the calander for friday morning - blocking off time for the individual to go and get said items.  It also provides data items for tracking purposes such as a timelog for each job, which items were found/fixed, are future repairs required, is a follow up call required?  It will populate the google calanders for them and notify management of this.
-*Under the admin paradigm the individual has all the same write access as the user but with some added features such as data collection/mining.  The admin has read/write access to the google calanders sections and 
+- Under the user paradigm the individual can view their calander for the week which has been updated from google calanders.  The different functions include adding a work repair order (with the quote price), adding a needed items list that will create a new spot on the calander for friday morning - blocking off time for the individual to go and get said items.  It also provides data items for tracking purposes such as a timelog for each job, which items were found/fixed, are future repairs required, is a follow up call required?  It will populate the google calanders for them and notify management of this.
+- Under the admin paradigm the individual has all the same write access as the user but with some added features such as data collection/mining.  The admin has read/write access to the google calanders sections and 
 
 # Future Development:
 - Future development ideas include:
