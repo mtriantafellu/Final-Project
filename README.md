@@ -10,9 +10,12 @@ The npm modules required for this project are as follows (all of which have been
 - npm 'react'
 - npm 'react-dom'
 - npm 'request'
+- npm 'require'
 - npm 'babel'
 - npm 'babel-loader'
 - npm 'webpack'
+- npm 'express'
+- npm 'express-'
 
 Google Calander:
 - npm install googleapis --save
