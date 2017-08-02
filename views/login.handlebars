@@ -24,9 +24,6 @@
         <h2>A Single Source for Job Management<h2>
     </div>
 
-
-
-
     <div class="row">
         <div class="col-md-6" id="register">
             <div class="panel panel-success panel-register">
@@ -64,17 +61,34 @@
                     <h3 class="panel-title">User Login </h3>
                 </div>
                 <div class="panel-body">
+                    <!--
                     <form>
                         <div class="form-group">
                             <label for="loginEmail">Email address <span class="glyphicon glyphicon-envelope"></span></label>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="loginEmail">
                         </div>
                         <div class="form-group">
                             <label for="loginPassword">Password <span class="glyphicon glyphicon-asterisk"></span></label>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="loginPassword">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+                    </form> -->
+                        <form class="create-form" action="/" method="POST">
+
+                            <div class="form-group">
+                                <label for="loginEmail">loginEmail:</label>
+                                <input type="text" id="loginEmail" name="loginEmail">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword">loginPassword:</label>
+                                <textarea id="loginPassword" name="loginPassword" rows="8" cols="40"></textarea>
+                            </div>
+
+
+                            <a class="btn btn-primary btn-lg" id="loginBtn" href="/tracker" type="submit">Log in</a>
+                        </form>
+
+
                 </div><!--panel-body-->
             </div><!--div class="panel panel-success panel-login"-->
         </div><!--id="login"-->
@@ -82,45 +96,6 @@
 
     <div class="row">
 
-        <h1>Quotes App</h1>
-
-            <p>Manage quotes with this app</p>
-
-            <!-- Pass in data from server.js -->
-            <ul>
-                {{#each quotes}}
-                <li>
-                    <p><span class="label">ID:</span> {{this.id}}</p>
-                    <p><span class="label">Quote:</span> {{this.quote}}</p>
-                    <p><span class="label">Author:</span> {{this.author}}</p>
-
-                    <form action="/{{this.id}}?_method=DELETE" method="POST">
-                        <input type="hidden" name="id" value="{{this.id}}">
-                            <button type="submit">Delete</button>
-                    </form>
-
-                    <a href="/{{this.id}}">Update this quote</a>
-                </li>
-                {{/each}}
-            </ul>
-
-            <h2>Add a Quote</h2>
-
-            <form class="create-form" action="/" method="POST">
-
-                <div class="form-group">
-                    <label for="auth">Author:</label>
-                    <input type="text" id="auth" name="author">
-                </div>
-
-                <div class="form-group">
-                    <label for="quo">Quote:</label>
-                    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-                </div>
-
-                <button type="submit">Add Quote</button>
-            </form>
-    </div>
 
 </div><!--div class="container"-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

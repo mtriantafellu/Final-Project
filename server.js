@@ -21,7 +21,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "root",
-    database: "trialFinal" });
+    database: "finalProject_db" });
 
 connection.connect(function(err) {
     if (err) {
@@ -52,18 +52,63 @@ app.get("/login", function(req, res) {
     });
 });
 
-/*
-// Post route -> back to home
-app.post("/", function(req, res) {
 
-    connection.query("INSERT INTO wishes (wish) VALUES (?)", [req.body.wish], function(err, result) {
+app.get("/tracker", function(req, res) {
+
+    connection.query("SELECT * FROM userInfo;", function(err, data) {
+        if (err) {
+            throw err;
+        }
+        console.log('data', data);
+
+        res.render("tracker", { userInfo: data });
+    });
+});
+
+app.post("/login", function(req, res) {
+    connection.query("INSERT INTO userInfo (loginEmail, loginPassword) VALUES (?, ?)", [
+        req.body.loginEmail, req.body.loginPassword
+    ], function(err, result) {
         if (err) {
             throw err;
         }
 
-        res.redirect("/");
+        res.redirect("/tracker");
     });
-
 });
-*/
+
+app.delete("/:id", function(req, res) {
+    connection.query("DELETE FROM userInfo WHERE id = ?", [req.params.id], function(err, result) {
+        if (err) {
+            throw err;
+        }
+        res.redirect("/tracker");
+    });
+});
+
+// Show the user the individual quote and the form to update the quote.
+app.get(":id", function(req, res) {
+    connection.query("SELECT * FROM userInfo WHERE id = ?", [req.params.id], function(err, data) {
+        if (err) {
+            throw err;
+        }
+
+        console.log(data);
+        res.render("single-quote", data[0]);
+    });
+});
+
+// Update a quote by an id and then redirect to the root route.
+app.put("/:id", function(req, res) {
+    connection.query("UPDATE userInfo SET userEmail = ?, userPassword = ? WHERE id = ?", [
+        req.body.loginEmail, req.body.loginPassword, req.params.id
+    ], function(err, result) {
+        if (err) {
+            throw err;
+        }
+
+        res.redirect("/tracker");
+    });
+});
+
 app.listen(port);
