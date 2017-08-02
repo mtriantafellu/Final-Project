@@ -1,0 +1,90 @@
+/* # for id   . for class */
+
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+body {
+
+    background-color: lightblue;
+
+}
+
+#title_row {
+
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+
+}
+
+h2 {
+    font-size: 100px;
+}
+
+#indexBtnRow {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+
+}
+
+#group {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#loginBtn {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    margin-top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-primary {
+
+    left: 255%;
+
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+
+    color: white;
+    background-image: none;
+    box-shadow: none;
+    background-repeat: none;
+    background-color: lightblue
+    border-color: darkblue;
+    border-width: 2px;
+
+}
+
+.btn-primary:active:focus {
+
+    color: white;
+    background-image: none;
+    box-shadow: none;
+    background-repeat: none;
+    background-color: darkblue;
+    border-color: lightblue;
+    border-width: 2px;
+
+}
+
+a {
+
+    color: rgba(0, 180, 2, 0.92);
+
+}
+
+a:hover, a:focus, a:active, a:success, a:visited {
+
+    color: rgba(0, 180, 2, 0.92);
+
+}

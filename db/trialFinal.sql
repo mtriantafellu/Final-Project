@@ -1,37 +1,21 @@
+#CREATE DATABASE `finalProject_db`;
 
-#customerinfoCREATE DATABASE `trialFinal`;
-
-USE `trialFinal`;
-
+USE `finalProject_db`;
+/*
 CREATE TABLE `userInfo` (
-id INT AUTO_INCREMENT,
-userName VARCHAR(255),
-googleEmail VARCHAR(255),
-phone INT,
+`id` INT AUTO_INCREMENT,
+`username` VARCHAR(255),
+`userpassword` VARCHAR(255),
+`admin` BOOLEAN DEFAULT FALSE,
 PRIMARY KEY (`id`)
 );
-
+*/
 CREATE TABLE `jobInfo` (
-id INT AUTO_INCREMENT,
-user_id INT DEFAULT NULL,
-dateOfAppointment VARCHAR(255),
-repairTitle VARCHAR(255),
-repairQuote VARCHAR(255),
-actualCost VARCHAR(255),
-discounted BOOLEAN DEFAULT FALSE,
-complete BOOLEAN DEFAULT FALSE,
-completionDate VARCHAR(255),
-PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `customerInfo` (
-id INT AUTO_INCREMENT,
-user_id INT DEFAULT NULL,
-name VARCHAR(255),
-address VARCHAR(255),
-phone INT,
-email VARCHAR(255),
-previousCustomer BOOLEAN DEFAULT FALSE,
-goodCustomer VARCHAR(255),
+`id` INT AUTO_INCREMENT,
+`user_id` INT DEFAULT NULL,
+`dateOfAppt` VARCHAR(255),
+`repairQuote` INT,
+`repairType` VARCHAR(255),
+`actualCost` INT,
 PRIMARY KEY (`id`)
 );

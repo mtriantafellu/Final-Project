@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+
+</head>
+<body>
+<div class="container">
+    <!--Jumbotron Div-->
+    <div class="jumbotron">
+
+        <div class="btn-group" role="group" id="jumboBtnGroup">
+
+            <a class="btn btn-primary btn-lg" href="/about" role="Log in">About</a>
+            <a class="btn btn-primary btn-lg" href="/features" role="Log in">Features</a>
+            <a class="btn btn-primary btn-lg" href="/contactUs" role="Log in">Contact Us!</a>
+
+        </div>
+
+        <h1>Job Tracker App</h1>
+        <h2>A Single Source for Job Management<h2>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-6" id="register">
+            <div class="panel panel-success panel-register">
+                <div class="panel-heading" id="pHeadings">
+                    <h3 class="panel-title">New User Registration</h3>
+                </div>
+
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="registerEmail">Email address <span class="glyphicon glyphicon-envelope"></span></label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Password <span class="glyphicon glyphicon-asterisk"></span></label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">User Name <span class="glyphicon glyphicon-plus"></span></label>
+                            <input type="username" class="form-control" id="userName" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number <span class="glyphicon glyphicon-phone-alt"></label>
+                            <input type="phonenumber" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div><!--panel-body-->
+            </div><!--panel panel-success panel-register"-->
+        </div><!--id="register"-->
+
+        <div class="col-md-6" id="login">
+            <div class="panel panel-success panel-login">
+                <div class="panel-heading" id="pHeadings">
+                    <h3 class="panel-title">User Login </h3>
+                </div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email address <span class="glyphicon glyphicon-envelope"></span></label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password <span class="glyphicon glyphicon-asterisk"></span></label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div><!--panel-body-->
+            </div><!--div class="panel panel-success panel-login"-->
+        </div><!--id="login"-->
+    </div><!-- div class="row"-->
+
+    <div class="row">
+
+        <h1>Quotes App</h1>
+
+            <p>Manage quotes with this app</p>
+
+            <!-- Pass in data from server.js -->
+            <ul>
+                {{#each quotes}}
+                <li>
+                    <p><span class="label">ID:</span> {{this.id}}</p>
+                    <p><span class="label">Quote:</span> {{this.quote}}</p>
+                    <p><span class="label">Author:</span> {{this.author}}</p>
+
+                    <form action="/{{this.id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                            <button type="submit">Delete</button>
+                    </form>
+
+                    <a href="/{{this.id}}">Update this quote</a>
+                </li>
+                {{/each}}
+            </ul>
+
+            <h2>Add a Quote</h2>
+
+            <form class="create-form" action="/" method="POST">
+
+                <div class="form-group">
+                    <label for="auth">Author:</label>
+                    <input type="text" id="auth" name="author">
+                </div>
+
+                <div class="form-group">
+                    <label for="quo">Quote:</label>
+                    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+                </div>
+
+                <button type="submit">Add Quote</button>
+            </form>
+    </div>
+
+</div><!--div class="container"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</body>
+</html>
+
