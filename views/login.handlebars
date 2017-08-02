@@ -4,7 +4,8 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/layout.css"/>
 
 </head>
 <body>
@@ -84,9 +85,15 @@
                                 <textarea id="loginPassword" name="loginPassword" rows="8" cols="40"></textarea>
                             </div>
 
+                            <div id="results"></div>
+
 
                             <a class="btn btn-primary btn-lg" id="loginBtn" href="/tracker" type="submit">Log in</a>
                         </form>
+
+
+                    <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
+                    <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
 
 
                 </div><!--panel-body-->
@@ -98,7 +105,10 @@
 
 
 </div><!--div class="container"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
 
 </body>
 </html>
