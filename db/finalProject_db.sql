@@ -18,3 +18,14 @@ CREATE TABLE `jobInfo` (
 `actualCost` INT,
 PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `customerInfo` (
+`id` INT AUTO_INCREMENT,
+`user_id` INT DEFAULT NULL,
+`customerName` VARCHAR(255),
+`customerAddress` VARCHAR(255),
+`customerPhone` INT,
+`otherInfo` VARCHAR(255),
+`dateOfService` VARCHAR(255),
+PRIMARY KEY (`id`)
+);

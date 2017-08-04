@@ -4,7 +4,7 @@
 
 body {
 
-    background-color: lightblue;
+    background-color: none;
 
 }
 
@@ -22,6 +22,7 @@ h2 {
 
 #indexBtnRow {
     margin-top: 5%;
+    left: 50%;
     text-align: center;
     font-family: 'Acme', sans-serif;
 
@@ -49,7 +50,7 @@ h2 {
 
 .btn-primary {
 
-    left: 255%;
+    left: 275%;
 
 }
 
@@ -59,8 +60,8 @@ h2 {
     background-image: none;
     box-shadow: none;
     background-repeat: none;
-    background-color: lightblue
-    border-color: darkblue;
+    background-color: none;
+    border-color: none;
     border-width: 2px;
 
 }
@@ -71,8 +72,8 @@ h2 {
     background-image: none;
     box-shadow: none;
     background-repeat: none;
-    background-color: darkblue;
-    border-color: lightblue;
+    background-color: none;
+    border-color: none;
     border-width: 2px;
 
 }

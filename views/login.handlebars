@@ -3,6 +3,8 @@
 <head>
     <title>Login</title>
 
+    <meta name="google-signin-client_id" content="796891676929-g4e698mi71q6p1vos9usb3dj39u7n9jj.apps.googleusercontent.com.apps.googleusercontent.com">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="/assets/css/layout.css"/>
@@ -26,35 +28,6 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6" id="register">
-            <div class="panel panel-success panel-register">
-                <div class="panel-heading" id="pHeadings">
-                    <h3 class="panel-title">New User Registration</h3>
-                </div>
-
-                <div class="panel-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="registerEmail">Email address <span class="glyphicon glyphicon-envelope"></span></label>
-                            <input type="email" class="form-control" id="registerEmail" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="registerPassword">Password <span class="glyphicon glyphicon-asterisk"></span></label>
-                            <input type="password" class="form-control" id="registerPassword" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="userName">User Name <span class="glyphicon glyphicon-plus"></span></label>
-                            <input type="username" class="form-control" id="userName" placeholder="User Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Phone Number <span class="glyphicon glyphicon-phone-alt"></label>
-                            <input type="phonenumber" class="form-control" id="phoneNumber" placeholder="Phone Number">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                </div><!--panel-body-->
-            </div><!--panel panel-success panel-register"-->
-        </div><!--id="register"-->
 
         <div class="col-md-6" id="login">
             <div class="panel panel-success panel-login">
@@ -62,17 +35,7 @@
                     <h3 class="panel-title">User Login </h3>
                 </div>
                 <div class="panel-body">
-                    <!--
-                    <form>
-                        <div class="form-group">
-                            <label for="loginEmail">Email address <span class="glyphicon glyphicon-envelope"></span></label>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="loginEmail">
-                        </div>
-                        <div class="form-group">
-                            <label for="loginPassword">Password <span class="glyphicon glyphicon-asterisk"></span></label>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="loginPassword">
-                        </div>
-                    </form> -->
+
                         <form class="create-form" action="/" method="POST">
 
                             <div class="form-group">
@@ -82,23 +45,42 @@
 
                             <div class="form-group">
                                 <label for="loginPassword">loginPassword:</label>
-                                <textarea id="loginPassword" name="loginPassword" rows="8" cols="40"></textarea>
+                                <textarea id="loginPassword" name="loginPassword"></textarea>
                             </div>
 
-                            <div id="results"></div>
-
-
-                            <a class="btn btn-primary btn-lg" id="loginBtn" href="/tracker" type="submit">Log in</a>
+                            <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
+                            <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
                         </form>
-
-
-                    <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
-                    <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
-
-
-                </div><!--panel-body-->
+                    </div><!--panel-body-->
             </div><!--div class="panel panel-success panel-login"-->
         </div><!--id="login"-->
+
+        <div class="col-md-6" id="login">
+            <div class="panel panel-success panel-login">
+                <div class="panel-heading" id="pHeadings">
+                    <h3 class="panel-title">Repair Quote</h3>
+                </div>
+                <div class="panel-body">
+
+
+                    <h2>Add a Repair Quote</h2>
+
+                    <form class="create-form" action="/" method="POST">
+
+                        <div class="form-group">
+                            <label for="repairTitle">Repair Title: </label>
+                            <input type="text" id="repairTitle" name="author">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="repairQuote">Repair Quote: </label>
+                            <textarea id="quo" name="repairQuote" rows="8" cols="40"></textarea>
+                        </div>
+
+                        <button type="submit">Add Quote</button>
+                    </form>
+                </div>
+
     </div><!-- div class="row"-->
 
     <div class="row">
@@ -106,9 +88,7 @@
 
 </div><!--div class="container"-->
 
-    <script async defer src="https://apis.google.com/js/api.js"
-            onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 </html>
