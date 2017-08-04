@@ -1,0 +1,10 @@
+{
+    "name": "matt/php",
+    "authors": [
+        {
+            "name": "Matthew",
+            "email": "mtriantafellu@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
